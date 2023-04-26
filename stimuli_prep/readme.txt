@@ -1,1 +1,0 @@
-these are taken from the stimuli norming analysis folder
