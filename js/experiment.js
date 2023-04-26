@@ -659,7 +659,7 @@ attention_aud.onended = function() {
     present_handle : function(stim)
 	 {
     $('#block_1').show();
-		exp.allow_key_press = 1;
+exp.allow_key_press = 0;
 		exp.response = null;
 
       // store stimulus data
@@ -675,7 +675,14 @@ audio.src = "audio/" + audio_source + ".wav";
 audio.load();
 audio.play();
 
+var allow_key_press_200ms;
+
+  allow_key_press_200ms = setTimeout(function(){
+exp.allow_key_press = 1;
+   }, 200);
+
 var my_time;
+
    audio.onended = function() {
    // exp.allow_key_press = 1;
    // $('#block_1').show();
@@ -707,6 +714,7 @@ console.log("clicking disabled");
       // stereotype_text_var.classList.add("active_bold");
       // console.log('check:', stereotype_text_var.className);
          $('#block_1').hide();
+         audio.pause();
          setTimeout(function(){
             clearTimeout(my_time);
           _s.button();
@@ -721,6 +729,7 @@ console.log("clicking disabled");
       // var non_stereotype_text_var = document.getElementById("non_stereotype_text_1");
       // non_stereotype_text_var.classList.add("active_bold");
         $('#block_1').hide();
+        audio.pause();
       // console.log('check:', non_stereotype_text_var.className);
         setTimeout(function(){
            clearTimeout(my_time);
@@ -782,7 +791,7 @@ console.log("clicking disabled");
     present_handle : function(stim)
 	 {
     $('#block_2').show();
-		exp.allow_key_press = 1;
+exp.allow_key_press = 0;
 		exp.response = null;
 
       // store stimulus data
@@ -797,6 +806,11 @@ console.log(audio_source);
 audio.src = "audio/" + audio_source + ".wav";
 audio.load();
 audio.play();
+
+var allow_key_press_200ms;
+  allow_key_press_200ms = setTimeout(function(){
+exp.allow_key_press = 1;
+   }, 200);
 
 var my_time;
    audio.onended = function() {
@@ -829,6 +843,7 @@ if (exp.response == null) {
       // non_stereotype_text_var.classList.add("active_bold");
       // console.log('check:', non_stereotype_text_var.className);
          $('#block_2').hide();
+         audio.pause();
          setTimeout(function(){
             clearTimeout(my_time);
           _s.button();
@@ -843,6 +858,7 @@ if (exp.response == null) {
       // stereotype_text_var.classList.add("active_bold");
       // console.log('check:', stereotype_text_var.className);
         $('#block_2').hide();
+        audio.pause();
         setTimeout(function(){
            clearTimeout(my_time);
           _s.button();
@@ -903,7 +919,7 @@ if (exp.response == null) {
     present_handle : function(stim)
 	 {
     $('#block_3').show();
-		exp.allow_key_press = 1;
+exp.allow_key_press = 0;
 		exp.response = null;
 
       // store stimulus data
@@ -918,6 +934,11 @@ console.log(audio_source);
 audio.src = "audio/" + audio_source + ".wav";
 audio.load();
 audio.play();
+
+var allow_key_press_200ms;
+  allow_key_press_200ms = setTimeout(function(){
+exp.allow_key_press = 1;
+   }, 200);
 
 var my_time;
    audio.onended = function() {
@@ -950,6 +971,7 @@ if (exp.response == null) {
       // stereotype_text_var.classList.add("active_bold");
       // console.log('check:', stereotype_text_var.className);
          $('#block_3').hide();
+         audio.pause();
          setTimeout(function(){
             clearTimeout(my_time);
           _s.button();
@@ -964,6 +986,7 @@ if (exp.response == null) {
       // non_stereotype_text_var.classList.add("active_bold");
       // console.log('check:', non_stereotype_text_var.className);
         $('#block_3').hide();
+        audio.pause();
         setTimeout(function(){
            clearTimeout(my_time);
           _s.button();
@@ -1024,7 +1047,7 @@ if (exp.response == null) {
     present_handle : function(stim)
 	 {
     $('#block_4').show();
-		exp.allow_key_press = 1;
+exp.allow_key_press = 0;
 		exp.response = null;
 
       // store stimulus data
@@ -1039,6 +1062,11 @@ console.log(audio_source);
 audio.src = "audio/" + audio_source + ".wav";
 audio.load();
 audio.play();
+
+var allow_key_press_200ms;
+  allow_key_press_200ms = setTimeout(function(){
+exp.allow_key_press = 1;
+   }, 200);
 
 var my_time;
    audio.onended = function() {
@@ -1071,6 +1099,7 @@ if (exp.response == null) {
       // non_stereotype_text_var.classList.add("active_bold");
       // console.log('check:', non_stereotype_text_var.className);
          $('#block_4').hide();
+         audio.pause();
          setTimeout(function(){
             clearTimeout(my_time);
           _s.button();
@@ -1085,6 +1114,7 @@ if (exp.response == null) {
       // stereotype_text_var.classList.add("active_bold");
       // console.log('check:', stereotype_text_var.className);
         $('#block_4').hide();
+        audio.pause();
         setTimeout(function(){
            clearTimeout(my_time);
           _s.button();
@@ -1145,7 +1175,7 @@ if (exp.response == null) {
     present_handle : function(stim)
 	 {
     $('#block_5').show();
-		exp.allow_key_press = 1;
+exp.allow_key_press = 0;
 		exp.response = null;
 
       // store stimulus data
@@ -1160,6 +1190,11 @@ console.log(audio_source);
 audio.src = "audio/" + audio_source + ".wav";
 audio.load();
 audio.play();
+
+var allow_key_press_200ms;
+  allow_key_press_200ms = setTimeout(function(){
+exp.allow_key_press = 1;
+   }, 200);
 
 var my_time;
    audio.onended = function() {
@@ -1192,6 +1227,7 @@ if (exp.response == null) {
       // stereotype_text_var.classList.add("active_bold");
       // console.log('check:', stereotype_text_var.className);
            $('#block_5').hide();
+           audio.pause();
          setTimeout(function(){
             clearTimeout(my_time);
           _s.button();
@@ -1206,6 +1242,7 @@ if (exp.response == null) {
       // non_stereotype_text_var.classList.add("active_bold");
       // console.log('check:', non_stereotype_text_var.className);
           $('#block_5').hide();
+          audio.pause();
         setTimeout(function(){
            clearTimeout(my_time);
           _s.button();
@@ -1266,7 +1303,7 @@ if (exp.response == null) {
     present_handle : function(stim)
 	 {
     $('#block_6').show();
-		exp.allow_key_press = 1;
+exp.allow_key_press = 0;
 		exp.response = null;
 
       // store stimulus data
@@ -1281,6 +1318,11 @@ console.log(audio_source);
 audio.src = "audio/" + audio_source + ".wav";
 audio.load();
 audio.play();
+
+var allow_key_press_200ms;
+  allow_key_press_200ms = setTimeout(function(){
+exp.allow_key_press = 1;
+   }, 200);
 
 var my_time;
 	 audio.onended = function() {
@@ -1338,6 +1380,7 @@ if (exp.response == null) {
  			// non_stereotype_text_var.classList.add("active_bold");
  			// console.log('check:', non_stereotype_text_var.className);
          $('#block_6').hide();
+         audio.pause();
    			 setTimeout(function(){
             clearTimeout(my_time);
    			 	_s.button();
@@ -1352,6 +1395,7 @@ if (exp.response == null) {
 			// stereotype_text_var.classList.add("active_bold");
 			// console.log('check:', stereotype_text_var.className);
         $('#block_6').hide();
+        audio.pause();
    		 	setTimeout(function(){
            clearTimeout(my_time);
    				_s.button();
