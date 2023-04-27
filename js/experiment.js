@@ -103,13 +103,6 @@ practice1_aud.onended = function() {
      button: function() {
          this.log_responses();
      },
-
-     // save response
-     // log_responses: function() {
-     //   exp.data_trials.push({
-
-     //   });
-     // },
    });
 
     // PRACTICE TRIAL 2
@@ -166,9 +159,7 @@ $('.err').hide();
  		 	//  }, 2000);
  		 }
  	 }
-
   };
-
       },
 
       // handle click on "Continue" button
@@ -176,15 +167,9 @@ $('.err').hide();
           this.log_responses();
           // exp.go(); //use exp.go() if and only if there is no "present"ed data, ie no list of stimuli.
       },
-
-      // save response
-      // log_responses: function() {
-      //   exp.data_trials.push({
-
-      //   });
-      // },
     });
 
+// ATTENTION SLIDE 1
 
    slides.attention1 = slide({
      name: "attention1",
@@ -193,8 +178,6 @@ $('.err').hide();
      start : function()
    {
     $('#attention1').show();
-    $('.err').hide();
-    $('.correct').hide();
     exp.allow_key_press = 0;
     exp.response = "";
 
@@ -210,8 +193,6 @@ attention_aud.onended = function() {
   console.log("audio ended");
   // $('#attention1').show();
       exp.allow_key_press = 1;
-  // setTimeout(function(){
-  //  }, 500);
 
    document.onkeydown = checkKey;
    function checkKey(e) {
@@ -221,13 +202,11 @@ attention_aud.onended = function() {
        exp.response = "yes";
        console.log(exp.response);
                  exp.allow_key_press = 0;
-   // var yes1_text_var = document.getElementById("yes1");
-   //    yes1_text_var.classList.add("active_bold");
                  $('#attention1').hide();
               setTimeout(function(){
          _s.button();
         exp.go();
-
+exp.allow_key_press = 0;
        }, 2000);
 
 
@@ -236,13 +215,11 @@ attention_aud.onended = function() {
       exp.response = "no";
       console.log(exp.response);
                 exp.allow_key_press = 0;
-   // var no1_text_var = document.getElementById("no1");
-   //    no1_text_var.classList.add("active_bold");
                 $('#attention1').hide();
       setTimeout(function(){
          _s.button();
        exp.go();
-       
+exp.allow_key_press = 0;
        }, 2000);
      }
    }
@@ -259,7 +236,6 @@ attention_aud.onended = function() {
       log_responses: function() {
         exp.data_trials.push({
       
-
       "block": "attention1",
       "choices": "no-yes",
       "response_time": "",
@@ -314,12 +290,11 @@ attention_aud.onended = function() {
        console.log("L pressed");
        exp.response = "yes";
                  exp.allow_key_press = 0;
-   // var yes2_text_var = document.getElementById("yes2");
-   //    yes2_text_var.classList.add("active_bold");
                  $('#attention2').hide();
               setTimeout(function(){
                 _s.button();
         exp.go();
+        exp.allow_key_press = 0;
        }, 2000);
 
 
@@ -327,12 +302,11 @@ attention_aud.onended = function() {
       console.log("S pressed");
       exp.response = "no";
                 exp.allow_key_press = 0;
-   // var no2_text_var = document.getElementById("no2");
-   //    no2_text_var.classList.add("active_bold");
                 $('#attention2').hide();
       setTimeout(function(){
         _s.button();
        exp.go();
+       exp.allow_key_press = 0;
        }, 2000);
      }
    }
@@ -377,8 +351,8 @@ attention_aud.onended = function() {
      start : function()
    {
     $('#attention3').show();
-    $('.err').hide();
-    $('.correct').hide();
+    // $('.err').hide();
+    // $('.correct').hide();
     exp.allow_key_press = 0;
     exp.response = "";
 
@@ -404,12 +378,11 @@ attention_aud.onended = function() {
        console.log("L pressed");
        exp.response = "yes";
                  exp.allow_key_press = 0;
-     // var yes3_text_var = document.getElementById("yes3");
-     //  yes3_text_var.classList.add("active_bold");
                  $('#attention3').hide();
               setTimeout(function(){
                 _s.button();
         exp.go();
+        exp.allow_key_press = 0;
        }, 2000);
 
 
@@ -417,12 +390,11 @@ attention_aud.onended = function() {
       console.log("S pressed");
       exp.response = "no";
                 exp.allow_key_press = 0;
-     // var no3_text_var = document.getElementById("no3");
-     //  no3_text_var.classList.add("active_bold");
                 $('#attention3').hide();
       setTimeout(function(){
         _s.button();
        exp.go();
+       exp.allow_key_press = 0;
        }, 2000);
      }
    }
@@ -467,8 +439,8 @@ attention_aud.onended = function() {
      start : function()
    {
     $('#attention4').show();
-    $('.err').hide();
-    $('.correct').hide();
+    // $('.err').hide();
+    // $('.correct').hide();
     exp.allow_key_press = 0;
     exp.response = "";
 
@@ -494,12 +466,11 @@ attention_aud.onended = function() {
        console.log("L pressed");
        exp.response = "no";
                  exp.allow_key_press = 0;
-     // var no4_text_var = document.getElementById("no4");
-     //  no4_text_var.classList.add("active_bold");
                  $('#attention4').hide();
               setTimeout(function(){
                 _s.button();
         exp.go();
+        exp.allow_key_press = 0;
        }, 2000);
 
 
@@ -507,12 +478,11 @@ attention_aud.onended = function() {
       console.log("S pressed");
       exp.response = "yes";
                 exp.allow_key_press = 0;
-     // var yes4_text_var = document.getElementById("yes4");
-     //  yes4_text_var.classList.add("active_bold");
                 $('#attention4').hide();
       setTimeout(function(){
         _s.button();
        exp.go();
+       exp.allow_key_press = 0;
        }, 2000);
      }
    }
@@ -557,8 +527,8 @@ attention_aud.onended = function() {
      start : function()
    {
     $('#attention5').show();
-    $('.err').hide();
-    $('.correct').hide();
+    // $('.err').hide();
+    // $('.correct').hide();
     exp.allow_key_press = 0;
     exp.response = "";
 
@@ -584,12 +554,11 @@ attention_aud.onended = function() {
        console.log("L pressed");
        exp.response = "no";
                  exp.allow_key_press = 0;
-     // var no5_text_var = document.getElementById("no5");
-     //  no5_text_var.classList.add("active_bold");
                  $('#attention5').hide();
               setTimeout(function(){
                 _s.button();
         exp.go();
+        exp.allow_key_press = 0;
        }, 2000);
 
 
@@ -597,12 +566,11 @@ attention_aud.onended = function() {
       console.log("S pressed");
       exp.response = "yes";
                 exp.allow_key_press = 0;
-     // var yes5_text_var = document.getElementById("yes5");
-     //  yes5_text_var.classList.add("active_bold");
                 $('#attention5').hide();
       setTimeout(function(){
         _s.button();
        exp.go();
+       exp.allow_key_press = 0;
        }, 2000);
      }
    }
@@ -638,13 +606,13 @@ attention_aud.onended = function() {
       },
     });
 
-
    // INSTRUCTIONS FOR MAIN EXPERIMENT
    slides.startExp = slide({
      name: "startExp",
      start: function() {
      },
      button: function() {
+      exp.allow_key_press = 0;
        exp.go(); //use exp.go() if and only if there is no "present" data.
      },
    });
@@ -658,7 +626,7 @@ attention_aud.onended = function() {
     present: exp.stimuli_block1,
     present_handle : function(stim)
 	 {
-    $('#block_1').show();
+    $('#stimuli_block1').show();
 exp.allow_key_press = 0;
 		exp.response = null;
 
@@ -676,31 +644,12 @@ audio.load();
 audio.play();
 
 var allow_key_press_200ms;
+audio.onplay = function(){
+  exp.startTime = Date.now();
+  console.log("Starting Audio")
+  // console.log("Pretest: ",exp.allow_key_press)
 
-  allow_key_press_200ms = setTimeout(function(){
-exp.allow_key_press = 1;
-   }, 200);
-
-var my_time;
-
-   audio.onended = function() {
-   // exp.allow_key_press = 1;
-   // $('#block_1').show();
-  console.log("audio ended");
-      exp.startTime = Date.now();
-  my_time = setTimeout(function(){
-    // exp.startTime = Date.now();
-if (exp.response == null) {
-               console.log("No response");
-              exp.response_time = Date.now() - exp.startTime
-              exp.response = "skip";
-              exp.response_type = "skip";
-              _s.button();
-              console.log("should skip to next trial")
-          }
-   }, 3000);
-
-     document.onkeydown = checkKey;
+    document.onkeydown = checkKey;
      function checkKey(e) {
        e = e || window.event;
        if (e.keyCode == 76 && exp.allow_key_press == 1) {
@@ -713,7 +662,7 @@ console.log("clicking disabled");
       // var stereotype_text_var = document.getElementById("stereotype_text_1");
       // stereotype_text_var.classList.add("active_bold");
       // console.log('check:', stereotype_text_var.className);
-         $('#block_1').hide();
+         $('#stimuli_block1').hide();
          audio.pause();
          setTimeout(function(){
             clearTimeout(my_time);
@@ -728,7 +677,7 @@ console.log("clicking disabled");
         exp.response_type = "non_stereotype";
       // var non_stereotype_text_var = document.getElementById("non_stereotype_text_1");
       // non_stereotype_text_var.classList.add("active_bold");
-        $('#block_1').hide();
+        $('#stimuli_block1').hide();
         audio.pause();
       // console.log('check:', non_stereotype_text_var.className);
         setTimeout(function(){
@@ -737,6 +686,30 @@ console.log("clicking disabled");
          }, 1000);
        }
      }
+
+  allow_key_press_200ms = setTimeout(function(){
+    exp.allow_key_press = 1;
+    // console.log("PostTest: ", exp.allow_key_press)
+  }, 200);
+};
+
+var my_time;
+
+   audio.onended = function() {
+
+  console.log("audio ended");
+      // exp.startTime = Date.now();
+  my_time = setTimeout(function(){
+    // exp.startTime = Date.now();
+if (exp.response == null) {
+               console.log("No response");
+              exp.response_time = Date.now() - exp.startTime
+              exp.response = "skip";
+              exp.response_type = "skip";
+              _s.button();
+              console.log("should skip to next trial")
+          }
+   }, 3000);
 
 };
       $(".err").hide();
@@ -747,15 +720,9 @@ console.log("clicking disabled");
 		// exp.audio_source = "";
 		// exp.target_source = "";
         this.log_responses();
-		// var stereotype_text_var = document.getElementById("stereotype_text_1");
-		// var non_stereotype_text_var = document.getElementById("non_stereotype_text_1");
-		// stereotype_text_var.classList.remove("active_bold");
-		// non_stereotype_text_var.classList.remove("active_bold");
+
         _stream.apply(this); //use _stream.apply(this) if there is a list of "present" stimuli to rotate through
-		// $('#stimuli').show();
         // exp.go(); //use exp.go() if and only if there is no "present"ed data, ie no list of stimuli.
-		// $('#stimuli').hide();
-		// $('#landing_page').show();
     },
 
     // save response
@@ -790,7 +757,7 @@ console.log("clicking disabled");
     present:  exp.stimuli_block2,
     present_handle : function(stim)
 	 {
-    $('#block_2').show();
+    $('#stimuli_block2').show();
 exp.allow_key_press = 0;
 		exp.response = null;
 
@@ -808,27 +775,10 @@ audio.load();
 audio.play();
 
 var allow_key_press_200ms;
-  allow_key_press_200ms = setTimeout(function(){
-exp.allow_key_press = 1;
-   }, 200);
+audio.onplay = function(){
+  console.log("Starting Audio")
+exp.startTime = Date.now();
 
-var my_time;
-   audio.onended = function() {
-    // $('#block_2').show();
-   // exp.allow_key_press = 1;
-  console.log("audio ended");
-       exp.startTime = Date.now();
-  my_time = setTimeout(function(){
-    // exp.startTime = Date.now();
-if (exp.response == null) {
-               console.log("No response");
-              exp.response_time = Date.now() - exp.startTime
-              exp.response = "skip";
-              exp.response_type = "skip";
-              _s.button();
-              console.log("should skip to next trial")
-          }
-   }, 3000);
 
      document.onkeydown = checkKey;
      function checkKey(e) {
@@ -842,7 +792,7 @@ if (exp.response == null) {
       // var non_stereotype_text_var = document.getElementById("non_stereotype_text_2");
       // non_stereotype_text_var.classList.add("active_bold");
       // console.log('check:', non_stereotype_text_var.className);
-         $('#block_2').hide();
+         $('#stimuli_block2').hide();
          audio.pause();
          setTimeout(function(){
             clearTimeout(my_time);
@@ -857,7 +807,7 @@ if (exp.response == null) {
       // var stereotype_text_var = document.getElementById("stereotype_text_2");
       // stereotype_text_var.classList.add("active_bold");
       // console.log('check:', stereotype_text_var.className);
-        $('#block_2').hide();
+        $('#stimuli_block2').hide();
         audio.pause();
         setTimeout(function(){
            clearTimeout(my_time);
@@ -866,24 +816,38 @@ if (exp.response == null) {
        }
      }
 
+  allow_key_press_200ms = setTimeout(function(){
+    exp.allow_key_press = 1;
+  }, 200);
+};
+
+var my_time;
+   audio.onended = function() {
+    // $('#block_2').show();
+   // exp.allow_key_press = 1;
+  console.log("audio ended");
+       // exp.startTime = Date.now();
+  my_time = setTimeout(function(){
+    // exp.startTime = Date.now();
+if (exp.response == null) {
+               console.log("No response");
+              exp.response_time = Date.now() - exp.startTime
+              exp.response = "skip";
+              exp.response_type = "skip";
+              _s.button();
+              console.log("should skip to next trial")
+          }
+   }, 3000);
+
 };
       $(".err").hide();
     },
 
     // handle click on "Continue" button
     button: function() {
-		// exp.audio_source = "";
-		// exp.target_source = "";
         this.log_responses();
-		// var stereotype_text_var = document.getElementById("stereotype_text_2");
-		// var non_stereotype_text_var = document.getElementById("non_stereotype_text_2");
-		// stereotype_text_var.classList.remove("active_bold");
-		// non_stereotype_text_var.classList.remove("active_bold");
         _stream.apply(this); //use _stream.apply(this) if there is a list of "present" stimuli to rotate through
-		// $('#stimuli').show();
         // exp.go(); //use exp.go() if and only if there is no "present"ed data, ie no list of stimuli.
-		// $('#stimuli').hide();
-		// $('#landing_page').show();
     },
 
     // save response
@@ -918,7 +882,7 @@ if (exp.response == null) {
     present:  exp.stimuli_block3,
     present_handle : function(stim)
 	 {
-    $('#block_3').show();
+    $('#stimuli_block3').show();
 exp.allow_key_press = 0;
 		exp.response = null;
 
@@ -936,29 +900,12 @@ audio.load();
 audio.play();
 
 var allow_key_press_200ms;
-  allow_key_press_200ms = setTimeout(function(){
-exp.allow_key_press = 1;
-   }, 200);
+audio.onplay = function(){
+  console.log("Starting Audio")
+exp.startTime = Date.now();
 
-var my_time;
-   audio.onended = function() {
-   //  $('#block_3').show();
-   // exp.allow_key_press = 1;
-  console.log("audio ended");
-       exp.startTime = Date.now();
-  my_time = setTimeout(function(){
-    // exp.startTime = Date.now();
-if (exp.response == null) {
-               console.log("No response");
-              exp.response_time = Date.now() - exp.startTime
-              exp.response = "skip";
-              exp.response_type = "skip";
-              _s.button();
-              console.log("should skip to next trial")
-          }
-   }, 3000);
 
-     document.onkeydown = checkKey;
+  document.onkeydown = checkKey;
      function checkKey(e) {
        e = e || window.event;
        if (e.keyCode == 76 && exp.allow_key_press == 1) {
@@ -970,7 +917,7 @@ if (exp.response == null) {
       // var stereotype_text_var = document.getElementById("stereotype_text_3");
       // stereotype_text_var.classList.add("active_bold");
       // console.log('check:', stereotype_text_var.className);
-         $('#block_3').hide();
+         $('#stimuli_block3').hide();
          audio.pause();
          setTimeout(function(){
             clearTimeout(my_time);
@@ -985,7 +932,7 @@ if (exp.response == null) {
       // var non_stereotype_text_var = document.getElementById("non_stereotype_text_3");
       // non_stereotype_text_var.classList.add("active_bold");
       // console.log('check:', non_stereotype_text_var.className);
-        $('#block_3').hide();
+        $('#stimuli_block3').hide();
         audio.pause();
         setTimeout(function(){
            clearTimeout(my_time);
@@ -993,6 +940,29 @@ if (exp.response == null) {
          }, 1000);
        }
      }
+
+  allow_key_press_200ms = setTimeout(function(){
+    exp.allow_key_press = 1;
+  }, 200);
+};
+
+var my_time;
+   audio.onended = function() {
+   //  $('#block_3').show();
+   // exp.allow_key_press = 1;
+  console.log("audio ended");
+       // exp.startTime = Date.now();
+  my_time = setTimeout(function(){
+    // exp.startTime = Date.now();
+if (exp.response == null) {
+               console.log("No response");
+              exp.response_time = Date.now() - exp.startTime
+              exp.response = "skip";
+              exp.response_type = "skip";
+              _s.button();
+              console.log("should skip to next trial")
+          }
+   }, 3000);
 
 };
       $(".err").hide();
@@ -1003,15 +973,8 @@ if (exp.response == null) {
 		// exp.audio_source = "";
 		// exp.target_source = "";
         this.log_responses();
-		// var stereotype_text_var = document.getElementById("stereotype_text_3");
-		// var non_stereotype_text_var = document.getElementById("non_stereotype_text_3");
-		// stereotype_text_var.classList.remove("active_bold");
-		// non_stereotype_text_var.classList.remove("active_bold");
         _stream.apply(this); //use _stream.apply(this) if there is a list of "present" stimuli to rotate through
-		// $('#stimuli').show();
         // exp.go(); //use exp.go() if and only if there is no "present"ed data, ie no list of stimuli.
-		// $('#stimuli').hide();
-		// $('#landing_page').show();
     },
 
     // save response
@@ -1046,7 +1009,7 @@ if (exp.response == null) {
     present:  exp.stimuli_block4,
     present_handle : function(stim)
 	 {
-    $('#block_4').show();
+    $('#stimuli_block4').show();
 exp.allow_key_press = 0;
 		exp.response = null;
 
@@ -1064,16 +1027,52 @@ audio.load();
 audio.play();
 
 var allow_key_press_200ms;
+audio.onplay = function(){
+  console.log("Starting Audio")
+exp.startTime = Date.now();
+
+
+     document.onkeydown = checkKey;
+     function checkKey(e) {
+       e = e || window.event;
+       if (e.keyCode == 76 && exp.allow_key_press == 1) {
+         console.log("L pressed");
+         exp.allow_key_press = 0;
+         exp.response_time = Date.now() - exp.startTime
+         exp.response = "born_in_US";
+         exp.response_type = "non_stereotype";
+         $('#stimuli_block4').hide();
+         audio.pause();
+         setTimeout(function(){
+            clearTimeout(my_time);
+          _s.button();
+        }, 1000);
+       } if (e.keyCode == 83 && exp.allow_key_press == 1) {
+        console.log("S pressed");
+        exp.allow_key_press = 0;
+        exp.response_time = Date.now() - exp.startTime
+        exp.response = "born_outside_US";
+        exp.response_type = "stereotype";
+        $('#stimuli_block4').hide();
+        audio.pause();
+        setTimeout(function(){
+           clearTimeout(my_time);
+          _s.button();
+         }, 1000);
+       }
+     }
+
   allow_key_press_200ms = setTimeout(function(){
-exp.allow_key_press = 1;
-   }, 200);
+    exp.allow_key_press = 1;
+  }, 200);
+};
 
 var my_time;
    audio.onended = function() {
    //  $('#block_4').show();
    // exp.allow_key_press = 1;
   console.log("audio ended");
-       exp.startTime = Date.now();
+       // exp.startTime = Date.now();
   my_time = setTimeout(function(){
     // exp.startTime = Date.now();
 if (exp.response == null) {
@@ -1086,42 +1085,6 @@ if (exp.response == null) {
           }
    }, 3000);
 
-     document.onkeydown = checkKey;
-     function checkKey(e) {
-       e = e || window.event;
-       if (e.keyCode == 76 && exp.allow_key_press == 1) {
-         console.log("L pressed");
-         exp.allow_key_press = 0;
-         exp.response_time = Date.now() - exp.startTime
-         exp.response = "born_in_US";
-         exp.response_type = "non_stereotype";
-      // var non_stereotype_text_var = document.getElementById("non_stereotype_text_4");
-      // non_stereotype_text_var.classList.add("active_bold");
-      // console.log('check:', non_stereotype_text_var.className);
-         $('#block_4').hide();
-         audio.pause();
-         setTimeout(function(){
-            clearTimeout(my_time);
-          _s.button();
-        }, 1000);
-       } if (e.keyCode == 83 && exp.allow_key_press == 1) {
-        console.log("S pressed");
-        exp.allow_key_press = 0;
-        exp.response_time = Date.now() - exp.startTime
-        exp.response = "born_outside_US";
-        exp.response_type = "stereotype";
-      // var stereotype_text_var = document.getElementById("stereotype_text_4");
-      // stereotype_text_var.classList.add("active_bold");
-      // console.log('check:', stereotype_text_var.className);
-        $('#block_4').hide();
-        audio.pause();
-        setTimeout(function(){
-           clearTimeout(my_time);
-          _s.button();
-         }, 1000);
-       }
-     }
-
 };
       $(".err").hide();
     },
@@ -1131,15 +1094,8 @@ if (exp.response == null) {
 		// exp.audio_source = "";
 		// exp.target_source = "";
         this.log_responses();
-		// var stereotype_text_var = document.getElementById("stereotype_text_4");
-		// var non_stereotype_text_var = document.getElementById("non_stereotype_text_4");
-		// stereotype_text_var.classList.remove("active_bold");
-		// non_stereotype_text_var.classList.remove("active_bold");
         _stream.apply(this); //use _stream.apply(this) if there is a list of "present" stimuli to rotate through
-		// $('#stimuli').show();
         // exp.go(); //use exp.go() if and only if there is no "present"ed data, ie no list of stimuli.
-		// $('#stimuli').hide();
-		// $('#landing_page').show();
     },
 
     // save response
@@ -1174,7 +1130,7 @@ if (exp.response == null) {
     present:  exp.stimuli_block5,
     present_handle : function(stim)
 	 {
-    $('#block_5').show();
+    $('#stimuli_block5').show();
 exp.allow_key_press = 0;
 		exp.response = null;
 
@@ -1192,29 +1148,11 @@ audio.load();
 audio.play();
 
 var allow_key_press_200ms;
-  allow_key_press_200ms = setTimeout(function(){
-exp.allow_key_press = 1;
-   }, 200);
+audio.onplay = function(){
+  console.log("Starting Audio")
+exp.startTime = Date.now();
 
-var my_time;
-   audio.onended = function() {
-   //  $('#block_5').show();
-   // exp.allow_key_press = 1;
-  console.log("audio ended");
-       exp.startTime = Date.now();
-  my_time = setTimeout(function(){
-    // exp.startTime = Date.now();
-if (exp.response == null) {
-               console.log("No response");
-              exp.response_time = Date.now() - exp.startTime
-              exp.response = "skip";
-              exp.response_type = "skip";
-              _s.button();
-              console.log("should skip to next trial")
-          }
-   }, 3000);
-
-     document.onkeydown = checkKey;
+  document.onkeydown = checkKey;
      function checkKey(e) {
        e = e || window.event;
        if (e.keyCode == 76 && exp.allow_key_press == 1) {
@@ -1226,7 +1164,7 @@ if (exp.response == null) {
       // var stereotype_text_var = document.getElementById("stereotype_text_5");
       // stereotype_text_var.classList.add("active_bold");
       // console.log('check:', stereotype_text_var.className);
-           $('#block_5').hide();
+           $('#stimuli_block5').hide();
            audio.pause();
          setTimeout(function(){
             clearTimeout(my_time);
@@ -1241,7 +1179,7 @@ if (exp.response == null) {
       // var non_stereotype_text_var = document.getElementById("non_stereotype_text_5");
       // non_stereotype_text_var.classList.add("active_bold");
       // console.log('check:', non_stereotype_text_var.className);
-          $('#block_5').hide();
+          $('#stimuli_block5').hide();
           audio.pause();
         setTimeout(function(){
            clearTimeout(my_time);
@@ -1250,24 +1188,36 @@ if (exp.response == null) {
        }
      }
 
+  allow_key_press_200ms = setTimeout(function(){
+    exp.allow_key_press = 1;
+  }, 200);
+};
+
+var my_time;
+   audio.onended = function() {
+  console.log("audio ended");
+       // exp.startTime = Date.now();
+  my_time = setTimeout(function(){
+    // exp.startTime = Date.now();
+if (exp.response == null) {
+               console.log("No response");
+              exp.response_time = Date.now() - exp.startTime
+              exp.response = "skip";
+              exp.response_type = "skip";
+              _s.button();
+              console.log("should skip to next trial")
+          }
+   }, 3000);
+
 };
       $(".err").hide();
     },
 
     // handle click on "Continue" button
     button: function() {
-		// exp.audio_source = "";
-		// exp.target_source = "";
         this.log_responses();
-		// var stereotype_text_var = document.getElementById("stereotype_text_5");
-		// var non_stereotype_text_var = document.getElementById("non_stereotype_text_5");
-		// stereotype_text_var.classList.remove("active_bold");
-		// non_stereotype_text_var.classList.remove("active_bold");
         _stream.apply(this); //use _stream.apply(this) if there is a list of "present" stimuli to rotate through
-		// $('#stimuli').show();
         // exp.go(); //use exp.go() if and only if there is no "present"ed data, ie no list of stimuli.
-		// $('#stimuli').hide();
-		// $('#landing_page').show();
     },
 
     // save response
@@ -1302,7 +1252,7 @@ if (exp.response == null) {
     present:  exp.stimuli_block6,
     present_handle : function(stim)
 	 {
-    $('#block_6').show();
+    $('#stimuli_block6').show();
 exp.allow_key_press = 0;
 		exp.response = null;
 
@@ -1320,16 +1270,58 @@ audio.load();
 audio.play();
 
 var allow_key_press_200ms;
+audio.onplay = function(){
+  console.log("Starting Audio")
+ exp.startTime = Date.now();
+
+
+   document.onkeydown = checkKey;
+     function checkKey(e) {
+       e = e || window.event;
+       if (e.keyCode == 76 && exp.allow_key_press == 1) {
+         console.log("L pressed");
+         exp.allow_key_press = 0;
+         exp.response_time = Date.now() - exp.startTime
+         exp.response = "south_florida";
+         exp.response_type = "non_stereotype";
+      // var non_stereotype_text_var = document.getElementById("non_stereotype_text_6");
+      // non_stereotype_text_var.classList.add("active_bold");
+      // console.log('check:', non_stereotype_text_var.className);
+         $('#stimuli_block6').hide();
+         audio.pause();
+         setTimeout(function(){
+            clearTimeout(my_time);
+          _s.button();
+        }, 1000);
+       } if (e.keyCode == 83 && exp.allow_key_press == 1) {
+        console.log("S pressed");
+        exp.allow_key_press = 0;
+        exp.response_time = Date.now() - exp.startTime
+        exp.response = "texas_border";
+        exp.response_type = "stereotype"
+      // var stereotype_text_var = document.getElementById("stereotype_text_6");
+      // stereotype_text_var.classList.add("active_bold");
+      // console.log('check:', stereotype_text_var.className);
+        $('#stimuli_block6').hide();
+        audio.pause();
+        setTimeout(function(){
+           clearTimeout(my_time);
+          _s.button();
+         }, 1000);
+       }
+     }
+
   allow_key_press_200ms = setTimeout(function(){
-exp.allow_key_press = 1;
-   }, 200);
+    exp.allow_key_press = 1;
+  }, 200);
+};
 
 var my_time;
 	 audio.onended = function() {
    //  $('#block_6').show();
    // exp.allow_key_press = 1;
   console.log("audio ended");
-       exp.startTime = Date.now();
+       // exp.startTime = Date.now();
   my_time = setTimeout(function(){
     // exp.startTime = Date.now();
 if (exp.response == null) {
@@ -1342,85 +1334,15 @@ if (exp.response == null) {
           }
    }, 3000);
 
-  // if (exp.response == null) {
-  //           console.log("No response");
-  //           exp.response_time = Date.now() - exp.startTime
-  //           exp.response = "skip";
-  //           _s.button();
-  //           console.log("should skip to next trial")
-  //           exp.startTime = Date.now();
-  //   exp.allow_key_press = 1;
-  //       }
-  //     }, 3000);
-
-
-	 	// console.log("audio ended");
-	 	// my_time = setTimeout(function(){
- 		//  		console.log("waiting to play next audio");
- 		//  		// move to next trial
-    //     if (exp.response == null) {
-    //         console.log("No response");
-		// 			 	exp.response_time = Date.now() - exp.startTime
-		// 			 	exp.response = "skip";
-		// 			 	_s.button();
-		// 			 	console.log("should skip to next trial")
-		// 		}
-    //   }, 3000);
-
-   	 document.onkeydown = checkKey;
-   	 function checkKey(e) {
-   		 e = e || window.event;
-   		 if (e.keyCode == 76 && exp.allow_key_press == 1) {
-   		 	 console.log("L pressed");
-         exp.allow_key_press = 0;
-   			 exp.response_time = Date.now() - exp.startTime
-   			 exp.response = "south_florida";
-         exp.response_type = "non_stereotype";
- 			// var non_stereotype_text_var = document.getElementById("non_stereotype_text_6");
- 			// non_stereotype_text_var.classList.add("active_bold");
- 			// console.log('check:', non_stereotype_text_var.className);
-         $('#block_6').hide();
-         audio.pause();
-   			 setTimeout(function(){
-            clearTimeout(my_time);
-   			 	_s.button();
-   		 	}, 1000);
-   		 } if (e.keyCode == 83 && exp.allow_key_press == 1) {
-   		 	console.log("S pressed");
-        exp.allow_key_press = 0;
-   			exp.response_time = Date.now() - exp.startTime
-   			exp.response = "texas_border";
-        exp.response_type = "stereotype"
-			// var stereotype_text_var = document.getElementById("stereotype_text_6");
-			// stereotype_text_var.classList.add("active_bold");
-			// console.log('check:', stereotype_text_var.className);
-        $('#block_6').hide();
-        audio.pause();
-   		 	setTimeout(function(){
-           clearTimeout(my_time);
-   				_s.button();
-   	 	   }, 1000);
-   		 }
-   	 }
-
 };
       $(".err").hide();
     },
 
     // handle click on "Continue" button
     button: function() {
-		// exp.audio_source = "";
-		// exp.target_source = "";
         this.log_responses();
-		// var stereotype_text_var = document.getElementById("stereotype_text_6");
-		// var non_stereotype_text_var = document.getElementById("non_stereotype_text_6");
-		// stereotype_text_var.classList.remove("active_bold");
-		// non_stereotype_text_var.classList.remove("active_bold");
         _stream.apply(this); //use _stream.apply(this) if there is a list of "present" stimuli to rotate through
-		// $('#stimuli').show();
         // exp.go(); //use exp.go() if and only if there is no "present"ed data, ie no list of stimuli.
-		// $('#stimuli').hide();
-		// $('#landing_page').show();
     },
 
     // save response
@@ -1604,27 +1526,6 @@ if (exp.response == null) {
 /// initialize experiment
 function init() {
 
-  // exp.trials = [];
-  // exp.catch_trials = [];
-  // exp.conditions = _.shuffle(["block_1","block_2","block_3","block_4","Block_5","block_6"]);
-  // exp.participant_condition = exp.conditions.pop()
-  //
-  // if (exp.participant_condition == "block_1") {
-  // 	var stimuli = block_1
-  // } else if (exp.participant_condition == "block_2") {
-  // 	var stimuli = block_2
-  // } else if (exp.participant_condition == "block_3") {
-  // 	var stimuli = block_3
-  // } else if (exp.participant_condition == "block_4") {
-  // 	var stimuli = block_4
-  // } else if (exp.participant_condition == "block_5") {
-  // 	var stimuli = block_5
-  // } else {
-  // 	var stimuli = block_6
-  // }
-
-  // var stimuli = all_stims;
-
   var unaccented_stimuli = unaccented_stims;
   var accented_stimuli = accented_stims;
 
@@ -1642,12 +1543,6 @@ exp.accented_stimuli = exp.accented_stimuli.slice(0, 20);
   exp.stimuli_block4 = _.shuffle(stimuli); //call _.shuffle(stimuli) to randomize the order;
   exp.stimuli_block5 = _.shuffle(stimuli); //call _.shuffle(stimuli) to randomize the order;
   exp.stimuli_block6 = _.shuffle(stimuli); //call _.shuffle(stimuli) to randomize the order;
-
-
-  // console.log(exp.stimuli)
-  // exp.n_trials = exp.stimuli.length;
-
-  // exp.condition = _.sample(["context", "no-context"]); //can randomize between subjects conditions here
 
   exp.system = {
     Browser: BrowserDetect.browser,
@@ -1667,8 +1562,6 @@ exp.structure = [
 	"practice_trial_1",
 	"practice_trial_2",
 	"startExp"];
-// exp.structure = exp.structure.concat(blocks);
-// exp.structure =  exp.structure.concat(blocks[0], "attention1", blocks[1], "attention5", blocks[2], "attention3", blocks[3], "attention4", blocks[4], "attention2", blocks[5]);
 
 exp.structure =  exp.structure.concat(blocks[0], "attention1", blocks[1], "attention4", blocks[2], "attention2", blocks[3], "attention5", blocks[4], "attention3", blocks[5]);
 exp.structure = exp.structure.concat(["follow_up","subj_info","thanks"]);
